@@ -65,7 +65,7 @@ var url='http://181.48.24.156:8183/Servicios/api/Proveedor/Filter/?id=adminsx&cl
                 url: url, 
 				type: "GET",
 				crossDomain:true,
-				contentType: "application/json", 
+				contentType: "application/xml", 
 				dataType: "json", 
           success: function(data) // Variable data contains the data we get from serverside
           {   
@@ -78,18 +78,17 @@ var url='http://181.48.24.156:8183/Servicios/api/Proveedor/Filter/?id=adminsx&cl
       });
 }
 function ValidarLoginn() {
-var url='http://php52.secuencia24.com/mememovil/lib/get_all_pais.php';
+var url='http://181.48.24.156:8183/Servicios/api/Proveedor/Filter/?id=adminsx&clave=nexos1';
 $.ajax({ // ajax call starts
           url: url, // JQuery loads serverside.php 
 		  type:"GET",
           dataType: 'json', // Choosing a JSON datatype	
-		  contentType: "application/json", 
-          //crossDomain:true,		 		  
+          contentType: "application/x-www-form-urlencoded; charset=UTF-8", 
+
           success: function(data) // Variable data contains the data we get from serverside
           {
 		      console.log(data);
 				alert("funciona");
-		
           },
 		  error: function(data){
 		       alert("error de conexion");
@@ -102,7 +101,7 @@ $.ajax({ // ajax call starts
 </head>
 <body>
 <div id="result"></div>
-<select id="idubi" name="idubi"><option value="1">sddsddsds henry alo</option></select>
+<select id="idubi" name="idubi"><option value="1">valido</option></select>
 <input type="submit" value="traer" onclick="ValidarLoginn();"/>
 </body>
 </html>
