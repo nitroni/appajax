@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@media screen and (max-width: 1024px) {
+/*****************************************id*/
+/***************************************************class*/
+	
+	
+}
+@media screen and (max-width: 600px) {
+/*****************************************id*/
+/***************************************************class*/	
+
+
+.boxbtnPrinSupCate img {
+	width:18.8%;
+	}
+}
+@media screen and (max-width: 500px) {
+/***************************************************id*/
+
+/***************************************************class*/
+.BoxlogoInterna {
+    margin: 0 auto;
+    max-width: 300px;
+	padding:0 20%;
+    position: relative;
+	text-align:center;
+}
+.boxBtnCategorias {
+	width:49%; 
+	display:inline-block; 
+	vertical-align:top;
+	}
+.boxBtnCategoriasInt {
+	width:23.5%; 
+	display:inline-block; 
+	vertical-align:top;
+	}	
+.logoCityLinkComple {
+	 padding:0 0 30% 0;
+	}
+.boxbtnPrinVolver {
+	width:13.2%;
+	}
+.boxbtnPrinMenu {
+	width:13.2%;
+	}
+.boxbtnPrinSupCate {
+	width:73%;
+	}
+.boxbtnPrinSupCate img {
+	width:18%;
+	}
+
+}
+
+@media screen and (max-width: 400px) {
+	
+
+/***************************************************id*/
+/***************************************************class*/	
+
+
+}
+
+@media screen and (max-width: 300px) {
+/*****************************************id*/
+/***************************************************class*/
+.boxBtnCategoriasInt {
+	width:23.0%; 
+	display:inline-block; 
+	vertical-align:top;
+	}
+	
+}
+
+@media screen and (max-width: 280px) {
+/*****************************************id*/
+/***************************************************class*/
+.boxbtnPrinSupCate img {
+	width:17.5%;
+	}
+}
