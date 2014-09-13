@@ -70,6 +70,7 @@ var url='http://181.48.24.156:8183/Servicios/api/Proveedor/Filter/?id=adminsx&cl
           success: function(data) // Variable data contains the data we get from serverside
           {   
 		   alert("full");
+		   
           },
 		  error: function(data){
 		       alert("Error en la conexion");
@@ -85,12 +86,13 @@ $.ajax({ // ajax call starts
           crossDomain:true,		 		  
           success: function(data) // Variable data contains the data we get from serverside
           {
-		
+		      console.log(data);
 				alert("funciona");
 		
           },
 		  error: function(data){
 		       alert("El usuario o la clave no son validas: error de conexion");
+			   console.log(data);
 		  }
       });
 	}
