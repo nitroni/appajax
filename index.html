@@ -60,23 +60,12 @@
 		  
 function ValidarLogin() {
     
-$.ajax({
-url:'http://181.48.24.156:8183/Servicios/api/Proveedor/Filter/?id=adminsx&clave=nexos1',
-type:'GET',
-dataType:'json',
-error:function(jqXHR,text_status,strError){
-alert("no connection");},
-timeout:60000,
-success:function(data){
-$("#result").html("");
-for(var i in data){
-$("#result").append("<li>"+data[i]+"</li>");
-}
-}
+$.getJSON('http://181.48.24.156:8183/Servicios/api/Proveedor/Filter/?id=adminsx&clave=nexos1',function(data){
+         
+           alert("funciono"+data.NomProveedor); 
+        
 });
 }
-
-	  
 	
 </script>
 
