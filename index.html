@@ -5,78 +5,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<title>AppcIbonokkk</title>
     <script src="jquery.1.9.1.min.js"></script>
-	
-	
 	<script type="text/javascript">
-	
-//function getBuses2() {   
-/*var url = 'http://jsonp.jit.su/?url=http%3A%2F%2F181.48.24.156%3A8183%2FServicios%2Fapi%2FConsumidor%2FFilter%2Fjdblandon%2Fxxxx'
-            $.ajax({
-                type: "GET",
-                url: url,
-				cache: false,
-                dataType: "json", // the data type we want back.  The data will come back in JSON format
-				contentType: "application/xml",	
-                crossDomain : true,	
-				jsonpCallback: 'jsonCallback',
-                beforeSend: function(json){
-                    json.setRequestHeader("Content-Type","application/json");
-                    json.setRequestHeader("Accept","application/json");
-                },				
-                success: function (json) {
-                    alert("funciono");
-                }
-            });*/
-			
-			
-	/*$.ajax({
-    url: 'http://181.48.24.156:8183/Servicios/api/Consumidor/Filter/jdblandon/xxxx/',
-    dataType: 'JSONP',
-    type: 'GET',
-	beforeSend: function (xhr) { xhr.setRequestHeader('Accept', 'application/jsonp'); },
-    contentType: "application/xml; charset=utf-8",
-	
-    success: function (data) {
-        console.log(data);
-    }
-});*/
-/*function ValidarLogin(){
- url: 'http://181.48.24.156:8183/Servicios/api/Proveedor/Filter/?id=adminsx&clave=nexos1',	
-		alert("llamo la funcion");
-		$.ajax({		    
-			url:url,
-			type:"GET",
-			crossDomain:true,
-			dataType : 'json',	
-			async:true,
-			cache: true,
-			jsonp:"_callback",
-			success:  function(data){
-			}
-			
-		});
-}*/
-		  
-		  
-function ValidarLogin() {
-    
-var url='http://181.48.24.156:8183/Servicios/api/Proveedor/Filter/?id=adminsx&clave=nexos1';	
-	$.ajax({ // ajax call starts
-                url: url, 
-				type: "GET",
-				crossDomain:true,
-				contentType: "application/xml", 
-				dataType: "json", 
-          success: function(data) // Variable data contains the data we get from serverside
-          {   
-		   alert("full");
-		   
-          },
-		  error: function(data){
-		       alert("Error en la conexion");
-		  }
-      });
-}
+$(document).bind("mobileinit", function(){
+   $.support.cors = true;
+   $.mobile.allowCrossDomainPages = true;
+});
 function ValidarLoginn() {
 var url='http://181.48.24.156:8183/Servicios/api/Proveedor/Filter/?id=adminsx&clave=nexos1';
 $.ajax({ // ajax call starts
@@ -101,7 +34,7 @@ $.ajax({ // ajax call starts
 </head>
 <body>
 <div id="result"></div>
-<select id="idubi" name="idubi"><option value="1">valido</option></select>
+<select id="idubi" name="idubi"><option value="1">valido h</option></select>
 <input type="submit" value="traer" onclick="ValidarLoginn();"/>
 </body>
 </html>
