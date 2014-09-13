@@ -78,12 +78,13 @@ var url='http://181.48.24.156:8183/Servicios/api/Proveedor/Filter/?id=adminsx&cl
       });
 }
 function ValidarLoginn() {
-var url='http://181.48.24.156:8183/Servicios/api/Proveedor/Filter/?id=adminsx&clave=nexos1';
+var url='http://php52.secuencia24.com/mememovil/lib/get_all_pais.php';
 $.ajax({ // ajax call starts
           url: url, // JQuery loads serverside.php 
 		  type:"GET",
           dataType: 'json', // Choosing a JSON datatype	
-          crossDomain:true,		 		  
+		  //contentType: "application/json", 
+          //crossDomain:true,		 		  
           success: function(data) // Variable data contains the data we get from serverside
           {
 		      console.log(data);
@@ -91,7 +92,7 @@ $.ajax({ // ajax call starts
 		
           },
 		  error: function(data){
-		       alert("El usuario o la clave no son validas: error de conexion");
+		       alert("error de conexion");
 			   console.log(data);
 		  }
       });
