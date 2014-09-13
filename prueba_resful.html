@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html>
+<head>
+ <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>AppcIbonokkk</title>
+    <script src="jquery-1.7.2.min.js"></script>
+	
+	
+	<script type="text/javascript">
+	
+//function getBuses2() {   
+/*var url = 'http://jsonp.jit.su/?url=http%3A%2F%2F181.48.24.156%3A8183%2FServicios%2Fapi%2FConsumidor%2FFilter%2Fjdblandon%2Fxxxx'
+            $.ajax({
+                type: "GET",
+                url: url,
+				cache: false,
+                dataType: "json", // the data type we want back.  The data will come back in JSON format
+				contentType: "application/xml",	
+                crossDomain : true,	
+				jsonpCallback: 'jsonCallback',
+                beforeSend: function(json){
+                    json.setRequestHeader("Content-Type","application/json");
+                    json.setRequestHeader("Accept","application/json");
+                },				
+                success: function (json) {
+                    alert("funciono");
+                }
+            });*/
+			
+			
+	/*$.ajax({
+    url: 'http://181.48.24.156:8183/Servicios/api/Consumidor/Filter/jdblandon/xxxx/',
+    dataType: 'JSONP',
+    type: 'GET',
+	beforeSend: function (xhr) { xhr.setRequestHeader('Accept', 'application/jsonp'); },
+    contentType: "application/xml; charset=utf-8",
+	
+    success: function (data) {
+        console.log(data);
+    }
+});*/
+/*function ValidarLogin(){
+ url: 'http://181.48.24.156:8183/Servicios/api/Proveedor/Filter/?id=adminsx&clave=nexos1',	
+		alert("llamo la funcion");
+		$.ajax({		    
+			url:url,
+			type:"GET",
+			crossDomain:true,
+			dataType : 'jsonp',	
+			async:true,
+			cache: true,
+			jsonp:"_callback",
+			success:  function(data){
+			}
+			
+		});
+}*/
+		  
+		  
+function ValidarLogin() {
+    
+$.ajax({
+url:'http://181.48.24.156:8183/Servicios/api/Proveedor/Filter/?id=adminsx&clave=nexos1',
+type:'GET',
+dataType:'json',
+error:function(jqXHR,text_status,strError){
+alert("no connection");},
+timeout:60000,
+success:function(data){
+$("#result").html("");
+for(var i in data){
+$("#result").append("<li>"+data[i]+"</li>");
+}
+}
+});
+}
+
+	  
+	
+</script>
+
+</head>
+<body>
+<div id="result"></div>
+<select id="idubi" name="idubi"><option value="1">sddsddsds </option></select>
+<input type="submit" value="traer" onclick="ValidarLogin();"/>
+</body>
+</html>
