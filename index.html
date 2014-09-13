@@ -14,7 +14,7 @@ $.ajax({ // ajax call starts
           url: url, // JQuery loads serverside.php 
 		  type:"GET",
           dataType: 'json', // Choosing a JSON datatype	
-
+           timeout: 5000,
           //contentType: "application/x-www-form-urlencoded; charset=UTF-8", 
            crossDomain: true,
           success: function(data) // Variable data contains the data we get from serverside
@@ -35,7 +35,7 @@ $.ajax({ // ajax call starts
 </head>
 <body>
 <div id="result"></div>
-<select id="idubi" name="idubi"><option value="1">valido funcionando</option></select>
+<select id="idubi" name="idubi"><option value="1">valido y funcionando</option></select>
 <input type="submit" value="traer" onclick="ValidarLoginn();"/>
 </body>
 </html>
