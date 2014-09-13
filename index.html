@@ -4,8 +4,14 @@
  <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<title>AppcIbonokkk</title>
-    <script src="jquery.1.9.1.min.js"></script>
-	<script src="phonegap-1.4.1.js"></script>
+    <!--<script src="jquery.1.9.1.min.js"></script>-->
+	<!--<script src="phonegap-1.4.1.js"></script>-->
+	<script src="jquery-1.10.2.min.js"></script>
+	<script src="jquery-ui-1.10.3.custom.min.js"></script>
+	
+	<script src="handlebars.runtime-v1.1.2.js"></script>
+	
+	
 	
 	<script type="text/javascript">
 function ValidarLoginn() {
@@ -29,13 +35,45 @@ $.ajax({ // ajax call starts
              }
 
       });
-	}
+}
+
+function ValidarQR() {
+var datog={"NitProveedor":999999999.0,"CedConsumidor":713999.0,"CodServicio":"SRV001","FecEntrada":"02/02/2014 09:08:03","TipRegistro":"E","Message":null,"ConRegistro":1,"CodProducto":""};
+var url='http://181.48.24.156:8183/Servicios/api/Registro/Add';
+$.ajax({ // ajax call starts
+          type:"POST",
+		  url: 'http://181.48.24.156:8183/Servicios/api/Registro/Add',
+		  //contentType :  "application/json",          
+		  data: JSON.stringify(datog), 
+		  async: false,
+		  //contentType: "application/json; charset=utf-8",
+		   // JQuery loads serverside.php 
+          //dataType: 'json', // Choosing a JSON datatype	
+		  //async  : true,
+          //timeout: 5000,
+          //contentType: "application/json", 
+          //crossDomain: true,
+		  
+          success: function(data) // Variable data contains the data we get from serverside
+          {
+		      console.log(data);
+				alert("envio existoso");
+          },
+		  error: function(data, textStatus , errorThrown){
+		         alert("error de conexion");
+			     console.log(data);
+                 alert ( textStatus +  ""  + errorThrown ); 
+           }
+
+      });
+	 
+	}		
 </script>
 
 </head>
 <body>
 <div id="result"></div>
 <select id="idubi" name="idubi"><option value="1">valido y funcionando</option></select>
-<input type="submit" value="traer" onclick="ValidarLoginn();"/>
+<input type="submit" value="traer" onclick="ValidarQR();"/>
 </body>
 </html>
